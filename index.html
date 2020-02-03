@@ -20,7 +20,7 @@
         <template slot="logo">
           <a href="/" class="logo">
             <span>GA</span>
-            <img src="assets/images/paw.svg" alt="logo" class="logo-icon"/>
+            <img src="assets/images/paw.svg" alt="logo" class="logo-icon" tab-index="0"/>
           </a>
         </template>
         <template slot-scope="props">
@@ -47,7 +47,7 @@
 
       <!-- Animated Banner -->
       <div role="banner" class="banner">
-        <img src="assets/images/GA-logo.svg" alt="Título fofo"/>
+        <img src="assets/images/GA-logo.svg" alt="logo" tab-index="0"/>
         <h1>Gatos Anônimos Floripa</h1>
         <p>"Era um gatinho igual a cem mil outros. Mas eu fiz dele um amigo. Ele é agora único no mundo."</p>
       </div>
@@ -59,7 +59,7 @@
         <quiz>
           <template slot="start" slot-scope="props">
             <div class="quiz__start">
-              <img src="assets/images/orange-cat.svg" />
+              <img src="assets/images/orange-cat.svg" alt="Gato laranja espera que você faça o quiz"/>
               <div class="quiz__start__content">
                 <p>
                   Quer saber se você está pronto para arranjar um amigo felino?
@@ -70,7 +70,7 @@
           </template>
           <template slot="first" slot-scope="props">
             <div class="quiz__image">
-              <img src="assets/images/ambiente-01.svg" />
+              <img src="assets/images/ambiente-01.svg" alt="Gato caçando uma mosca pendurado em uma janela telada"/>
             </div>
             <p class="sentence">Moro em ambiente onde o bichano ficará protegido.</p>
             <ul class="notes">
@@ -82,7 +82,7 @@
           </template>
           <template slot="second" slot-scope="props">
             <div class="quiz__image">
-              <img src="assets/images/cat-happy.svg" />
+              <img src="assets/images/cat-happy.svg" alt="Gato feliz e bem cuidado"/>
             </div>
             <p class="sentence">Tenho condições financeiras para pagar a castração, comprar ração de qualidade, vacinas etc.</p>
             <ul class="notes">
@@ -95,7 +95,7 @@
           </template>
           <template slot="third" slot-scope="props">
             <div class="quiz__image">
-              <img src="assets/images/cat-scared.svg" />
+              <img src="assets/images/cat-scared.svg" alt="Gato assustado escondido embaixo da cama"/>
             </div>
             <p class="sentence">Todos os membros da minha casa estão de acordo com a adoção.</p>
             <p class="notes"><img src="assets/images/info.svg" class="info-icon" alt="Info" /> Gatos levam um tempo para se adaptar a um novo ambiente, podendo miar, se esconder e até passar mal durante esse período.
@@ -108,7 +108,7 @@
               <img src="assets/images/cat-wise.svg" />
             </div>
             <p class="sentence">Tenho ciência de que sou responsável pela vida de um bichano.</p>
-            <p class="notes"><img src="assets/images/info.svg" class="info-icon" alt="Info" /> A expectativa de vida do gato é de 16 anos, podendo chegar a duas décadas. Você deve estar ciente de que precisa ser responsável
+            <p class="notes"><img src="assets/images/info.svg" class="info-icon" alt="Gato idoso" /> A expectativa de vida do gato é de 16 anos, podendo chegar a duas décadas. Você deve estar ciente de que precisa ser responsável
             pelo bichano durante toda a vida dele.</p>
             <button class="btn btn__green" @click="props.next(5)">Sim</button>
             <button class="btn btn__blue" @click="props.next(6)">Não</button>
@@ -116,7 +116,7 @@
           <template slot="success">
             <div class="align-left">
               <div class="quiz__image">
-                <img src="assets/images/cat-success.svg" />
+                <img src="assets/images/cat-success.svg" alt="Gato festejando seu sucesso"/>
               </div>
               <h3>Parabéns! Você passou pela primeira fase da entrevista!</h3>
               <h4>Próximos passos:</h4>
@@ -130,7 +130,7 @@
           </template>
           <template slot="fail">
             <div class="quiz__image">
-              <img src="assets/images/cat-not-the-right-time.svg" />
+              <img src="assets/images/cat-not-the-right-time.svg" alt="Gato pensando que não está na hora pra adota-lo"/>
             </div>
             <p>Talvez, agora não seja o momento de ter um amigo felino.</p>
           </template>
@@ -166,7 +166,7 @@
             </div>
             <div class="social__follow">
               <p class="social__follow__copy">Siga o projeto pelas redes sociais</p>
-              <img src="assets/images/follow-2-01.svg" />
+              <img src="assets/images/follow-2-01.svg" alt="Siga a gente no Facebook e Instagram"/>
             </div>
           </article>
         </div>
