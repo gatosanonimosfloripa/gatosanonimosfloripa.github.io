@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Gatos Anônimos Floripa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gatos Anônimos Floripa">
+  <meta name="author" content="Gatos Anônimos">
+
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.min.css"/>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <!-- Navigation -->
+    <nav>
+      <toggle-menu>
+        <template slot="logo">
+          <a href="/" class="logo">
+            <span>GA</span>
+            <img src="assets/images/paw.svg" alt="logo" class="logo-icon"/>
+          </a>
+        </template>
+        <template slot-scope="props">
+          <li>
+            <a href="sobre.html" @click="props.hide">Sobre</a>
+          </li>
+          <li>
+            <a href="contato.html" @click="props.hide">Ajude</a>
+          </li>
+          <li>
+            <a href="#adopt" @click="props.hide">Adote</a>
+          </li>
+          <li>
+            <a href="#partners" @click="props.hide">Parceiros</a>
+          </li>
+          <li>
+            <a href="contato.html" @click="props.hide">Contato</a>
+          </li>
+        </template>
+      </toggle-menu>
+    </nav>
+
+    <main class="container">
+
+      <!-- Animated Banner -->
+      <div role="banner" class="banner">
+        <img src="assets/images/GA-logo.svg" alt="Título fofo"/>
+        <h1>Gatos Anônimos Floripa</h1>
+        <p>"Era um gatinho igual a cem mil outros. Mas eu fiz dele um amigo. Ele é agora único no mundo."</p>
+      </div>
+
+      <!-- What do I need to adopt a cat? -->
+      <section id="adopt">
+        <h2>Quero adotar</h2>
+
+        <quiz>
+          <template slot="start" slot-scope="props">
+            <div class="quiz__start">
+              <img src="assets/images/orange-cat.svg" />
+              <div class="quiz__start__content">
+                <p>
+                  Quer saber se você está pronto para arranjar um amigo felino?
+                </p>
+                <button class="btn" @click="props.next(1)">Faça o quiz!</button>
+              </div>
+            </div>
+          </template>
+          <template slot="first" slot-scope="props">
+            <div class="quiz__image">
+              <img src="assets/images/ambiente-01.svg" />
+            </div>
+            <p class="sentence">Moro em ambiente onde o bichano ficará protegido.</p>
+            <ul class="notes">
+              <li><img src="assets/images/info.svg" class="info-icon" alt="Info" /> Gatos com acesso a rua são expostos a riscos como atropelamentos, envenenamentos, doenças graves etc.</li>
+              <li><img src="assets/images/info.svg" class="info-icon" alt="Info" /> Damos preferência para adotantes que moram ambientes telados ou onde o gatinho não terá acesso a rua.</li>
+            </ul>
+            <button class="btn btn__green" @click="props.next(2)">Sim</button>
+            <button class="btn btn__blue" @click="props.next(6)">Não</button>
+          </template>
+          <template slot="second" slot-scope="props">
+            <div class="quiz__image">
+              <img src="assets/images/cat-happy.svg" />
+            </div>
+            <p class="sentence">Tenho condições financeiras para pagar a castração, comprar ração de qualidade, vacinas etc.</p>
+            <ul class="notes">
+              <li><img src="assets/images/info.svg" class="info-icon" alt="Info" /> Castração é um ato de amor! Apenas doamos gatos castrados.</li>
+              <li><img src="assets/images/info.svg" class="info-icon" alt="Info" /> Mesmo gatos sem acesso a rua precisam de imunização contra doenças que podem ser transmitidas por roedores, por exemplo.
+              Por isso, a vacina é essencial.</li>
+            </ul>
+            <button class="btn btn__green" @click="props.next(3)">Sim</button>
+            <button class="btn btn__blue" @click="props.next(6)">Não</button>
+          </template>
+          <template slot="third" slot-scope="props">
+            <div class="quiz__image">
+              <img src="assets/images/cat-scared.svg" />
+            </div>
+            <p class="sentence">Todos os membros da minha casa estão de acordo com a adoção.</p>
+            <p class="notes"><img src="assets/images/info.svg" class="info-icon" alt="Info" /> Gatos levam um tempo para se adaptar a um novo ambiente, podendo miar, se esconder e até passar mal durante esse período.
+            É importante que todos os membros da sua casa tenham ciência disso e que aceitem manter o ambiente seguro.</p>
+            <button class="btn btn__green" @click="props.next(4)">Sim</button>
+            <button class="btn btn__blue" @click="props.next(6)">Não</button>
+          </template>
+          <template slot="forth" slot-scope="props">
+            <div class="quiz__image">
+              <img src="assets/images/cat-wise.svg" />
+            </div>
+            <p class="sentence">Tenho ciência de que sou responsável pela vida de um bichano.</p>
+            <p class="notes"><img src="assets/images/info.svg" class="info-icon" alt="Info" /> A expectativa de vida do gato é de 16 anos, podendo chegar a duas décadas. Você deve estar ciente de que precisa ser responsável
+            pelo bichano durante toda a vida dele.</p>
+            <button class="btn btn__green" @click="props.next(5)">Sim</button>
+            <button class="btn btn__blue" @click="props.next(6)">Não</button>
+          </template>
+          <template slot="success">
+            <div class="align-left">
+              <div class="quiz__image">
+                <img src="assets/images/cat-success.svg" />
+              </div>
+              <h3>Parabéns! Você passou pela primeira fase da entrevista!</h3>
+              <h4>Próximos passos:</h4>
+              <p>
+                Para adotar um bichano, entre em contato via inbox na nossa página no <a href="https://www.facebook.com/GatosAnonimosFloripa">Facebook</a> ou <a href="https://www.instagram.com/gatosanonimosfloripa/">Instagram</a>.
+              </p>
+              <p>
+                 Daremos continuidade à entrevista e, estando tudo certo, faremos de tudo para encontrar o seu novo melhor amigo :)
+              </p>
+            </div>
+          </template>
+          <template slot="fail">
+            <div class="quiz__image">
+              <img src="assets/images/cat-not-the-right-time.svg" />
+            </div>
+            <p>Talvez, agora não seja o momento de ter um amigo felino.</p>
+          </template>
+        </quiz>
+      </section>
+
+      <!-- Social -->
+      <section id="social">
+        <h2>Novidades</h2>
+        <div class="social">
+          <article>
+            <div class="instagram-wrapper">
+              <template>
+                <instagram-grid :size="4" :posts="['B7zAD_Yn1Mx', 'B7tTi5kAAtA', 'B7lo9nOAf2D', 'B6-8VM6AjEM', 'B6020R0gOSB', 'B6jIb0dg9zZ', 'B6tBd18g3jZ', 'B6V7UuYguvH', 'B6bDJHQHqjf', 'BwpN_Z9AWtf', 'BryyRPsg-ut', 'BrTlIf5gdmb', 'BpZgpuXgYn7', 'BoVEUMogKu0', 'BiWjxwzgChy']"/>
+              </template>
+              <div class="instagram-wrapper__info">
+                <img class="instagram-wrapper__avatar" src="assets/images/GA-logo.svg" alt="Gatos Anônimos Instagram" />
+                <a href="https://www.instagram.com/gatosanonimosfloripa/" class="instagram-wrapper__username">
+                  @gatosanonimosfloripa
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article>
+            <div style="margin: 0 auto; text-align: center;">
+              <div class="fb-page" data-href="https://www.facebook.com/GatosAnonimosFloripa" data-tabs="timeline" data-width="300" data-height=""
+                data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true" style="z-index: 0;">
+                <blockquote cite="https://www.facebook.com/GatosAnonimosFloripa" class="fb-xfbml-parse-ignore">
+                  <a href="https://www.facebook.com/GatosAnonimosFloripa">Facebook</a>
+                </blockquote>
+              </div>
+            </div>
+            <div class="social__follow">
+              <p class="social__follow__copy">Siga o projeto pelas redes sociais</p>
+              <img src="assets/images/follow-2-01.svg" />
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Out partners -->
+      <section id="partners">
+        <h2>Nossos parceiros</h2>
+        <p>Avise que foi indicado pelos Gatos Anônimos e ajude o projeto:</p>
+        <ul class="partners">
+          <li>
+            <a href="https://www.facebook.com/petshopbichano/">
+              <img src="assets/images/bichano.jpg" alt="Petshop Bichano"/>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/SeecurityReedeProtecao/">
+              <img src="assets/images/security.jpg" alt="Security Redes de Proteção"/>
+            </a>
+          </li>
+        </ul>
+        <p>Quer se tornar um parceiro? Entre em contato através do <a href="contato.html">nosso formulário</a>!</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© Gatos Anônimos Floripa 2020</p>
+      <p> Made with <span id="heart"></span> by <a href="https://github.com/jackiecard" target="_blank" title="Jackie's github page">jackiecard</a>.</p>
+    </footer>
+  </div>
+  <div id="fb-root"></div>
+  
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v5.0"></script>
+
+  <script src="assets/js/bundle.js"></script>
+</body>
+</html>

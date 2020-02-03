@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <title>Gatos Anônimos Floripa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gatos Anônimos Floripa">
+  <meta name="author" content="Gatos Anônimos">
+
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.min.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <!-- Navigation -->
+    <nav>
+      <toggle-menu>
+        <template slot="logo">
+          <a href="/" class="logo">
+            <span>GA</span>
+            <img src="assets/images/paw.svg" alt="logo" class="logo-icon" />
+          </a>
+        </template>
+        <template slot-scope="props">
+          <li>
+            <a href="sobre.html" @click="props.hide">Sobre</a>
+          </li>
+          <li>
+            <a href="contato.html" @click="props.hide">Ajude</a>
+          </li>
+          <li>
+            <a href="index.html#adopt" @click="props.hide">Adote</a>
+          </li>
+          <li>
+            <a href="index.html#partners" @click="props.hide">Parceiros</a>
+          </li>
+          <li>
+            <a href="contato.html" @click="props.hide">Contato</a>
+          </li>
+        </template>
+      </toggle-menu>
+    </nav>
+
+    <main class="container">
+
+      <!-- Animated Banner -->
+      <div role="banner" class="banner">
+        <img src="assets/images/GA-logo.svg" alt="Título fofo" />
+        <h1>Gatos Anônimos Floripa</h1>
+        <p>"Era um gatinho igual a cem mil outros. Mas eu fiz dele um amigo. Ele é agora único no mundo."</p>
+      </div>
+
+      <!-- Support the project -->
+      <section id="support">
+        <h2>Como ajudar</h2>
+        <p>
+          Para nos ajudar com as outras despesas (areia, ração, vermífugo, antipulgas, pet milk, produtos de limpeza, gasolina etc)
+          contamos com a doação dos mesmos ou de pequenas quantias em dinheiro.
+        </p>
+        <p>
+          Para ajudar você pode entrar em contato pelo inbox da página no Facebook ou usando o formulário de contato abaixo.
+        </p>
+      </section>
+
+      <!-- Contact Form -->
+      <section id="contact">
+        <h2>Contato</h2>
+        <form id="contact-form">
+          <div class="form-field">
+            <label for="nome">Nome completo:</label>
+            <input type="text" title="nome" name="nome" id="nome" value="" required/>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email:</label>
+            <input type="email" title="email" name="email" id="email" value="" required/>
+          </div>
+
+          <div class="form-field">
+            <label for="celular">Celular:</label>
+            <input type="text" title="celular" name="celular" id="celular" value="" required/>
+          </div>
+
+          <div class="form-field">
+            <label for="mensagem">Mensagem:</label>
+            <textarea title="Comment" name="mensagem" id="mensagem" required></textarea>
+          </div>
+
+          <button class="btn" type="submit" id="send-btn">Enviar</button>
+        </form>
+
+        <div id="form-success" style="display: none">
+          Mensagem enviada com sucesso! Assim que terminarmos de alimentar os gatinhos, responderemos :)
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© Gatos Anônimos Floripa 2020</p>
+      <p> Made with
+        <span id="heart"></span> by
+        <a href="https://github.com/jackiecard" target="_blank" title="Jackie's github page">jackiecard</a>.</p>
+    </footer>
+  </div>
+  <div id="fb-root"></div>
+
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v5.0"></script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyA-6_ipx-PDwl0VR71OpxVFqLrxebI0ppY",
+      authDomain: "gatosanonimos-434b4.firebaseapp.com",
+      databaseURL: "https://gatosanonimos-434b4.firebaseio.com",
+      projectId: "gatosanonimos-434b4",
+      storageBucket: "gatosanonimos-434b4.appspot.com",
+      messagingSenderId: "407150289296",
+      appId: "1:407150289296:web:24b5e16e138089c7569315",
+      measurementId: "G-YN2FF2H04P"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+
+  <script src="assets/js/bundle.js"></script>
+</body>
+
+</html>
