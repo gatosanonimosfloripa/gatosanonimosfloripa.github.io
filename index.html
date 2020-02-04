@@ -7,16 +7,6 @@
   <meta name="description" content="Gatos Anônimos Floripa">
   <meta name="author" content="Gatos Anônimos">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157743797-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-157743797-1');
-  </script>
-
   <link rel="stylesheet" type="text/css" href="assets/css/styles.min.css"/>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -154,11 +144,11 @@
           <article>
             <div class="instagram-wrapper">
               <template>
-                <instagram-grid :size="4" :posts="['B7zAD_Yn1Mx', 'B7tTi5kAAtA', 'B7lo9nOAf2D', 'B6-8VM6AjEM', 'B6020R0gOSB', 'B6jIb0dg9zZ', 'B6tBd18g3jZ', 'B6V7UuYguvH', 'B6bDJHQHqjf', 'BwpN_Z9AWtf', 'BryyRPsg-ut', 'BrTlIf5gdmb', 'BpZgpuXgYn7', 'BoVEUMogKu0', 'BiWjxwzgChy', 'Bxh-dGkAYXw', 'BqS94NRAPhI', 'BqnCLv8gyGS', 'Bp2nBP3g2JT', 'Bo5OWGtg5qh', 'Bh5LsHJgzyD', 'BXk6e5kFz88']"/>
+                <instagram-grid :size="4" :posts="['B7zAD_Yn1Mx', 'B7tTi5kAAtA', 'B7lo9nOAf2D', 'B6-8VM6AjEM', 'B6020R0gOSB', 'B6jIb0dg9zZ', 'B6tBd18g3jZ', 'B6V7UuYguvH', 'B6bDJHQHqjf', 'BwpN_Z9AWtf', 'BryyRPsg-ut', 'BrTlIf5gdmb', 'BpZgpuXgYn7', 'BoVEUMogKu0', 'BiWjxwzgChy']"/>
               </template>
               <div class="instagram-wrapper__info">
                 <img class="instagram-wrapper__avatar" src="assets/images/GA-logo.svg" alt="Gatos Anônimos Instagram" />
-                <a href="https://www.instagram.com/gatosanonimosfloripa/" target="_blank" class="instagram-wrapper__username">
+                <a href="https://www.instagram.com/gatosanonimosfloripa/" class="instagram-wrapper__username">
                   @gatosanonimosfloripa
                 </a>
               </div>
@@ -188,23 +178,27 @@
         <p>Avise que foi indicado pelos Gatos Anônimos e ajude o projeto:</p>
         <ul class="partners">
           <li>
-            <a href="https://www.facebook.com/petshopbichano/" target="_blank">
-              <img src="assets/images/bichano.jpg" alt="Petshop Bichano"/>
+            <a href="https://www.facebook.com/petshopbichano/" target="_blank" 
+              v-tag="{ event: 'uaevent', category: 'partners', action: 'refer', label: 'Petshop Bichano'}">
+              <img src="assets/images/bichano.jpg" alt="Petshop Bichano" />
             </a>
           </li>
           <li>
-            <a href="https://www.facebook.com/SeecurityReedeProtecao/" target="_blank">
-              <img src="assets/images/security.jpg" alt="Security Redes de Proteção"/>
+            <a href="https://www.facebook.com/SeecurityReedeProtecao/" target="_blank"
+              v-tag="{ event: 'uaevent', category: 'partners', action: 'refer', label: 'Security Redes de Protecao'}">
+              <img src="assets/images/security.jpg" alt="Security Redes de Proteção" />
             </a>
           </li>
           <li>
-            <a href="https://www.facebook.com/Tarsila-Ateli%C3%AA-1853243758123642/" target="_blank">
-              <img src="assets/images/tarsila.jpeg" alt="Tarsila Ateliê"/>
+            <a href="https://www.facebook.com/Tarsila-Ateli%C3%AA-1853243758123642/" target="_blank"
+              v-tag="{ event: 'uaevent', category: 'partners', action: 'refer', label: 'Tarsila Atelie'}">
+              <img src="assets/images/tarsila.jpeg" alt="Tarsila Ateliê" />
             </a>
           </li>
           <li>
-            <a href="https://www.facebook.com/Miau-em-Casa-195063441275394/" target="_blank">
-              <img src="assets/images/miauemcasa.jpeg" alt="Miau Em Casa Catsitter"/>
+            <a href="https://www.facebook.com/Miau-em-Casa-195063441275394/" target="_blank"
+              v-tag="{ event: 'uaevent', category: 'partners', action: 'refer', label: 'Miau Em Casa Catsitter'}">
+              <img src="assets/images/miauemcasa.jpeg" alt="Miau Em Casa Catsitter" />
             </a>
           </li>
         </ul>
